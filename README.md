@@ -28,6 +28,7 @@ Alla endpoints kräver att du lägger till `?code=dinFunctionKey` i URL:en.
 ## Autentisering
 
 API:t använder **Function key** för att kontrollera åtkomst.
+
 Så här anropar du en endpoint:
 GET https://airbnbbookingapi.azurewebsites.net/api/bookings?code=DIN_FUNCTION_KEY
 
@@ -47,5 +48,3 @@ Funktionerna returnerar följande HTTP-statuskoder:
         400 Bad Request – Felaktig inmatning
         404 Not Found – Bokning hittades ej
         401 Unauthorized – Saknar function key
-
-        ---
