@@ -23,7 +23,7 @@ Det hanterar gästbokningar för ett Airbnb eftersom kalkylblad är så 2010.
 
 ## Köra lokalt
 
-1. **Kloning (av repot, inget annat)**  
+1. **Kloning (av repot, inget annat)**:  
 ```bash
 git clone https://github.com/TantBella/BulbulaAPI.git
 ```
