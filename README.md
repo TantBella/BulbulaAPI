@@ -1,6 +1,7 @@
 # BulbulaAPI
 
-Detta är ett API som är byggt med Azure Functions och Cosmos DB. DEt hanterar gästbokningar för ett Airbnb eftersom kalkylblad är så 2010.
+Detta är ett API som är byggt med Azure Functions och Cosmos DB.  
+DEt hanterar gästbokningar för ett Airbnb eftersom kalkylblad är så 2010.
 
 ## Funktioner:
 
@@ -22,10 +23,9 @@ Detta är ett API som är byggt med Azure Functions och Cosmos DB. DEt hanterar 
 
 ##  Köra lokalt:
 
-1. Kloning (av repot, inget annat):
-
-``bash
-git clone https://github.com/TantBella/BulbulaAPI.git``
+1. Kloning (av repot, inget annat)  
+I bash:  
+``git clone https://github.com/TantBella/BulbulaAPI.git``
 
 Detta behöver du innan du börjar leka hotellchef:
 
@@ -34,15 +34,15 @@ Detta behöver du innan du börjar leka hotellchef:
     - Insomnia (eller valfritt verktyg där man kan stirra på JSON)  
     - En Cosmos DB-sträng och nej, du får inte min.
 
-2. Lägg till local.settings.json:
+2. Lägg till **local.settings.json**:
 
-``{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
-    "CosmosConnectionString": "din-hemliga-cosmos-sträng"
-  }
+``{  
+  "IsEncrypted": false,  
+  "Values": {  
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",  
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",  
+    "CosmosConnectionString": "din-hemliga-cosmos-sträng"  
+  }  
 }``
 
 3. Kör projektet via Visual Studio eller func start
@@ -69,22 +69,21 @@ Skapar en ny bokning. För gäster som inte vill boka via "ett visst känt före
 
 Exempel på JSON-body:
 
-{
-  "guestName": "Tant Bella",
-  "checkInDate": "2025-11-26",
-  "checkOutDate": "2025-12-11",
-  "guests": 4,
-}
+`{  
+  "guestName": "Tant Bella",  
+  "checkInDate": "2025-11-26",  
+  "checkOutDate": "2025-12-11",  
+  "guests": 4,  
+}`
 
 ---
 
 ## Autentisering
 
-API:t använder **Function key** för att kontrollera åtkomst.
-
+API:t använder **Function key** för att kontrollera åtkomst.  
 Exempel på hur du anropar en endpoint:
 
-GET: https://airbnbbookingapi.azurewebsites.net/api/bookings?code=DIN_FUNCTION_KEY
+`GET: https://airbnbbookingapi.azurewebsites.net/api/bookings?code=DIN_FUNCTION_KEY`
 
 Du hittar Function Key i Azure Portal under:  
 Function App > Functions > App keys 
